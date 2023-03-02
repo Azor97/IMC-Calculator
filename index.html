@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>IMC Calculator</title>
 </head>
 <body>
-    <h1>Calculadora de IMC</h1>
-    <p>Índice de massa corporal</p>
-    <form action="" method="post">
-        <label for="altura">Digite sua altura:</label>
-        <input type="number" name="altura" id="altura" placeholder="1.75" maxlength="5" minlength="3">
-        <label for="peso">Digite seu peso atual:</label>
-        <input type="number" name="peso" id="peso" placeholder="80" maxlength="5" minlength="3">
-        <input type="button" value="Calcular" onclick="calcular()">
-    </form>
-
-    <div id="resultado-container">
-        <p id="resultado">RESULTADO</p>
+    <div id="principal">
+        <div id="titulo">
+            <h1>Calculadora de IMC</h1>
+            <p class="subtitulo">Índice de massa corporal</p>
+        </div>
+        <div id="conteudo">
+            <form onsubmit="return calcular(event)" autocomplete="off">
+                <label for="altura" class="alt">Digite sua altura:</label>
+                <input type="text" name="altura" id="altura" placeholder="1.75" maxlength="5" minlength="3" class="alt" required>
+                <label for="peso" class="ps">Digite seu peso atual:</label>
+                <input type="text" name="peso" id="peso" placeholder="70" maxlength="3" minlength="1" class="ps" required>
+                <input type="submit" value="Calcular" id="button">
+            </form>
+        </div>
+        <div id="resultado-container">
+            <p id="resultado">RESULTADO</p>
+        </div>
     </div>
 
     <script src="script.js"></script>
